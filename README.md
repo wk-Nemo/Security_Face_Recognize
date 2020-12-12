@@ -22,7 +22,6 @@ A face recognition system based on fully homomorphic encryption, local ranking a
 - 一个开源项目：利用 Python 开发，对于输入的摄像头视频流，借助 Dlib 提供的检测识别模型来进行人脸识别。
 项目如下：
 https://github.com/coneypo/Dlib_face_recognition_from_camera
-其中包括详细的环境配置、代码运行以及博客论文介绍，可以帮助有效的实现一个人脸识别，但是改人脸识别效果没有特别好。
 
 
 #### 2.2加密部分

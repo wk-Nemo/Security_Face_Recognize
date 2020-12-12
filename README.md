@@ -42,7 +42,8 @@ https://github.com/coneypo/Dlib_face_recognition_from_camera
 
 #### 2.3应用开发部分
 安卓应用开发（前端）——服务器端开发/数据库端开发（后端）
-##### 前端部分：安卓开发
+##### 前端部分：
+安卓开发
 ###### 参考文案：
 - 推荐参考书:《第一行代码》
 - 参考文档：https://developer.android.google.cn/docs
@@ -51,7 +52,8 @@ https://github.com/coneypo/Dlib_face_recognition_from_camera
 - 界面布局
 - 网络请求
 
-###### 后端部分：python + mysql 
+##### 后端部分：
+python + mysql 
 ###### 主要工作：
 - 人脸识别算法---->同态加密、局部加密、信息负表示
 - 网络请求（使用Django）

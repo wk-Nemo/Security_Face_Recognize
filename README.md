@@ -29,7 +29,7 @@ https://github.com/coneypo/Dlib_face_recognition_from_camera
 基本原理——加密代码编辑/加密库的使用方法——加密开发
 ###### 基本原理：
 三篇论文已发在群中，可以自行查看。
-###### 同态加密：
+###### 2.2.1同态加密：
 关于同态加密加密部分，我们可以使用微软的SEAL库进行加密
 - 下面链接是SEAL库的原开源项目：
 - https://github.com/microsoft/SEAL
@@ -41,22 +41,27 @@ https://github.com/coneypo/Dlib_face_recognition_from_camera
 
 
 #### 2.3应用开发部分
-安卓应用开发（前端）——服务器端开发/数据库端开发（后端）
-##### 前端部分：
-安卓开发
-###### 参考文案：
-- 推荐参考书:《第一行代码》
-- 参考文档：https://developer.android.google.cn/docs
+前后端分离：微信小程序开发（前端）——服务器端开发/数据库端开发（后端）
+##### 2.3.1前端部分：
+微信小程序
+###### 1.参考文案：
+- 微信开发文档：https://developers.weixin.qq.com/miniprogram/dev/framework/
 
-###### 主要工作：
+###### 2.主要工作：
 - 界面布局
+- 人脸拍照以及加密（同态加密、局部加密、信息负表示）
 - 网络请求
 
-##### 后端部分：
-python + mysql 
+##### 2.3.2后端部分：
+python3.6 + MySql +Django
+###### 1.参考文档
+- python3.6文档：https://docs.python.org/3.6/
+- MySql文档：https://www.mysqlzh.com/
+- Django文档：https://docs.djangoproject.com/zh-hans/2.1/
+
 ###### 主要工作：
-- 人脸识别算法---->同态加密、局部加密、信息负表示
-- 网络请求（使用Django）
+- 基于加密算法后的同态加密、局部加密、信息负表示
+- 网络请求
 
 
 

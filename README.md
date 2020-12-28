@@ -57,7 +57,7 @@ python3.6 + MySql +Django
 ###### 1.参考文档
 - python3.6文档：https://docs.python.org/3.6/
 - MySql文档：https://www.mysqlzh.com/
-- Django文档：https://docs.djangoproject.com/zh-hans/2.1/
+- Django文档：https://docs.djangoproject.com/en/3.1/contents/
 
 ###### 主要工作：
 - 基于加密算法后的同态加密、局部加密、信息负表示

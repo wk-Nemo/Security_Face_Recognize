@@ -44,6 +44,7 @@ https://github.com/coneypo/Dlib_face_recognition_from_camera
 前后端分离：微信小程序开发（前端）——服务器端开发/数据库端开发（后端）
 ##### 2.3.1前端部分：
 微信小程序
+原型图地址：47.103.200.75
 ###### 1.参考文案：
 - 微信开发文档：https://developers.weixin.qq.com/miniprogram/dev/framework/
 

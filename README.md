@@ -54,9 +54,9 @@ https://github.com/coneypo/Dlib_face_recognition_from_camera
 - 网络请求
 
 ##### 2.3.2后端部分：
-python3.6 + MySql +Django
+python3.9 + MySql +Django
 ###### 1.参考文档
-- python3.6文档：https://docs.python.org/3.6/
+- python3.9文档：https://docs.python.org/zh-cn/3.9/whatsnew/3.9.html
 - MySql文档：https://www.mysqlzh.com/
 - Django文档：https://docs.djangoproject.com/en/3.1/contents/
 

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加密人脸识别系统</title>
+    <!-- 网站说明 -->
+    <meta name="description" content="加密人脸识别系统" />
+    <!-- 关键字 -->
+    <meta name="keywords" content="人脸识别,人脸检测,数据加密,负数据加密,同态加密,局部排序加密,支付系统" />
+
+    <!-- 引入favicon图标 -->
+    <link rel="shortcut icon" href="favicon.ico" />
+    <!-- 引入我们的初始化样式文件 -->
+    <link rel="stylesheet" href="css/base.css">
+    <!-- 引入我们公共的样式文件 -->
+    <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body class="bodycss">
+    <div class="nav wrap" id="nav">
+        <div class="title">
+            {{ message }}
+        </div>
+        <div class="navitems">
+            <ul>
+                <li>
+                    <a href="index.html" :class="{active:Active[0]}" @click="floor(0)">首页</a>
+                </li>
+                <li>
+                    <a href="gain.html" :class="{active:Active[1]}" @click="floor(1)">录取</a>
+                </li>
+                <li>
+                    <a href="info.html" :class="{active:Active[2]}" @click="floor(2)">信息</a>
+                </li>
+                <li>
+                    <a href="#" :class="{active:Active[3]}" @click="floor(3)">关于</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="introduce" id="introduce">
+        <h2 class="text_title">安全的加密人脸识别</h2>
+        <h4 class="detailed_introduce">
+            {{ detailed_introduction }}
+        </h4>
+        <div class="predict_buttom">
+            <a href="/gain.html" class="begin_predict">
+                开始体验
+            </a>
+        </div>
+    </div>
+
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="js/vue.js"></script>
+    <!-- 官网提供的 axios 在线地址 -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- 引入首页的js文件 -->
+    <script src="js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加密人脸识别系统</title>
+    <!-- 网站说明 -->
+    <meta name="description" content="加密人脸识别系统" />
+    <!-- 关键字 -->
+    <meta name="keywords" content="人脸识别,人脸检测,数据加密,负数据加密,同态加密,局部排序加密,支付系统" />
+
+    <!-- 引入favicon图标 -->
+    <link rel="shortcut icon" href="favicon.ico" />
+    <!-- 引入我们的初始化样式文件 -->
+    <link rel="stylesheet" href="css/base.css">
+    <!-- 引入我们公共的样式文件 -->
+    <link rel="stylesheet" href="css/common.css">
+    <!-- 引入获取数据页面的样式文件 -->
+    <link rel="stylesheet" href="css/gain.css">
+    <!-- 引入图标库 -->
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_2283796_7ki2m0zngh4.css">
+</head>
+
+<body class="bodycss">
+    <!-- 导航栏 -->
+    <div class="nav wrap" id="nav">
+        <div class="title">
+            {{ message }}
+        </div>
+        <div class="navitems">
+            <ul>
+                <li>
+                    <a href="index.html" :class="{active:Active[0]}" @click="floor(0)">首页</a>
+                </li>
+                <li>
+                    <a href="gain.html" :class="{active:Active[1]}" @click="floor(1)">录取</a>
+                </li>
+                <li>
+                    <a href="info.html" :class="{active:Active[2]}" @click="floor(2)">信息</a>
+                </li>
+                <li>
+                    <a href="#" :class="{active:Active[3]}" @click="floor(3)">关于</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="photo">
+
+        <div class="picture_model wrap">
+            <h2 class="picture_title">拍摄照片</h2>
+            <i class="iconfont icontouxiang" style="font-size: 100px;"></i>
+            <div class="open_camera">
+                <a href="javascript:;" @click="redis()">开启摄像头</a>
+            </div>
+            <h2 class="picture_title" style="margin: 15px 0;">上传你的照片</h2>
+        </div>
+        <div class="upload_pictures wrap">
+            <h4>请限制照片大小在6M之内</h4>
+            <div class="quantity">
+                <span>0/1</span>
+            </div>
+            <a href="javascript:;" class="icon_add">
+                <i class="iconfont icontianjia" style="font-size: 80px;"></i>
+                <img :src="imgsrc" alt="imgTag" id="imgTag">
+            </a>
+            <!-- 利用块的方式实现一条分割线 -->
+            <div class="line"></div>
+            <div class="upload">
+                <a href="javascript:;">上传</a>
+            </div>
+        </div>
+
+        <div class="mask" id="mask" v-show="isShow">
+            <div class="video_model">
+                <video id="video" width="768" height="300" autoplay="autoplay"></video>
+            </div>
+            <div class="upload">
+                <a href="javascript:;" @click="hide()" id="hide">关闭摄像头</a>
+            </div>
+            <!-- <button @click="hide()" id="hide">关闭摄像头</button> -->
+            <div class="upload">
+                <a href="javascript:;" class="take_picture" @click="take_picture()">拍照</a>
+            </div>
+            <!-- <button class="take_picture" onclick="take_picture()">拍照</button> -->
+        </div>
+
+        <!-- 作为处理数据的中间节点 请忽略 -->
+        <canvas id="temp_canvas" width="80px" height="80px" style="display: none;"></canvas>
+
+    </div>
+
+
+
+
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <!-- <script src="js/vue.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- 官网提供的 axios 在线地址 -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- 引入首页的js文件 -->
+    <script src="js/gain.js"></script>
+</body>
+
+</html>

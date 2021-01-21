@@ -1,0 +1,149 @@
+.picture_model {
+    /* 子元素水平居中对齐 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 40px;
+    width: 60%;
+    border-bottom: 1px solid white;
+}
+
+.picture_title {
+    /* margin: 0 auto; */
+    /* text-align: center; */
+    color: white;
+    font-size: 23px;
+    font-weight: lighter;
+}
+
+
+.icontouxiang {
+    color: white;
+    /* width: 40px; */
+
+
+}
+
+.open_camera a {
+    display: block;
+    width: 120px;
+    height: 40px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 2px solid white;
+    /* background-color: white; */
+    line-height: 35px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
+
+.upload_pictures {
+    /* 子元素水平居中对齐 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 60%;
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.63); */
+}
+
+/* 上传照片的提示信息 */
+.upload_pictures h4 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: white;
+
+}
+
+/* 数量统计信息 */
+.quantity {
+    position: absolute;
+    top: 13px;
+    right: 15px;
+
+}
+
+.quantity span {
+    color: white;
+    font-size: 14px;
+
+}
+
+.icon_add {
+    /* 重新选择子项的排列方式：侧轴从头开始 */
+    align-self: flex-start;
+    margin-left: 15px;
+    position: relative;
+}
+
+.icon_add i {
+    color: white;
+    /* font-weight: lighter; */
+}
+
+#imgTag {
+    width: 85px;
+    height: 85px;
+    /* background-color: white; */
+    border: 1px solid red;
+    margin-left: 20px;
+    position: absolute;
+    top: 20px;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.63);
+}
+
+.upload a {
+    display: block;
+    width: 90px;
+    height: 40px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 2px solid white;
+    /* background-color: white; */
+    line-height: 35px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
+
+.mask {
+    position: absolute;
+    top: 100px;
+    /* 设置居中对齐 */
+    left: 50%;
+    transform: translateX(-50%);
+    /* display: none; */
+    width: 50%;
+    height: 450px;
+    background-color: rgba(58, 58, 58, 0.925);
+    /* transition: all 5s; */
+    border-radius: 5%;
+}
+
+#hide {
+    position: absolute;
+    bottom: 25px;
+    left: 110px;
+}
+
+.take_picture {
+    position: absolute;
+    bottom: 25px;
+    right: 110px;
+}
+
+.video_model {
+    width: 100%;
+    height: 300px;
+    margin: 20px auto;
+}

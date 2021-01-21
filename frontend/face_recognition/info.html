@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加密人脸识别系统</title>
+    <!-- 网站说明 -->
+    <meta name="description" content="加密人脸识别系统" />
+    <!-- 关键字 -->
+    <meta name="keywords" content="人脸识别,人脸检测,数据加密,负数据加密,同态加密,局部排序加密,支付系统" />
+
+    <!-- 引入favicon图标 -->
+    <link rel="shortcut icon" href="favicon.ico" />
+    <!-- 引入我们的初始化样式文件 -->
+    <link rel="stylesheet" href="css/base.css">
+    <!-- 引入我们公共的样式文件 -->
+    <link rel="stylesheet" href="css/common.css">
+    <!-- 引入信息界面的样式文件 -->
+    <link rel="stylesheet" href="css/info.css">
+    <!-- 引入图标库 -->
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_2283796_7ki2m0zngh4.css">
+</head>
+
+<body class="bodycss">
+    <div class="nav wrap" id="nav">
+        <div class="title">
+            {{ message }}
+        </div>
+        <div class="navitems">
+            <ul>
+                <li>
+                    <a href="index.html" :class="{active:Active[0]}" @click="floor(0)">首页</a>
+                </li>
+                <li>
+                    <a href="gain.html" :class="{active:Active[1]}" @click="floor(1)">录取</a>
+                </li>
+                <li>
+                    <a href="info.html" :class="{active:Active[2]}" @click="floor(2)">信息</a>
+                </li>
+                <li>
+                    <a href="#" :class="{active:Active[3]}" @click="floor(3)">关于</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="info_model wrap">
+        <h2 class="info_title">信息</h2>
+        <h3>用户ID:</h3>
+        <br>
+
+        <h2 class="info_title">用户头像:</h2>
+        <div class="info_img">
+            <img src="" alt="">
+        </div>
+
+        <h2 class="info_title">识别比对(密文):</h2>
+
+    </div>
+
+    <div class="upload_pictures wrap">
+        <h4>请限制照片大小在6M之内</h4>
+        <div class="quantity">
+            <span>0/1</span>
+        </div>
+
+        <div class="imgUp">
+            <a class="icon_add">
+                <i class="iconfont icontianjia" style="font-size: 80px;"></i>
+            </a>
+            <div class="upFile">
+                <input type="file" name="file" id="chooseImage" />
+            </div>
+        </div>
+
+        <div class="imgShow">
+            <img src="#" id="cropedBigImg" />
+        </div>
+
+        <!-- 利用块的方式实现一条分割线 -->
+        <div class="line"></div>
+        <div class="upload">
+            <a href="javascript:;">上传</a>
+        </div>
+    </div>
+
+    <div class="data wrap">
+        <h2 class="info_title">原始脸型数据:</h2>
+        <div class="get">
+            <a href="javascript:;">点击获取</a>
+        </div>
+    </div>
+
+    <div class="data wrap">
+        <h2 class="info_title">加密脸型数据:</h2>
+        <div class="get">
+            <a href="javascript:;">点击获取</a>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="js/vue.js"></script>
+    <!-- 引入jquery -->
+    <script src="/js/jquery.min.js"></script>
+    <!-- 官网提供的 axios 在线地址 -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- 引入首页的js文件 -->
+    <script src="js/info.js"></script>
+</body>
+
+</html>

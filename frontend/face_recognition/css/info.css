@@ -1,0 +1,152 @@
+.info_model {
+    /* 子元素水平居中对齐 */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    position: relative;
+    margin-top: 40px;
+    width: 60%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.63);
+    padding-bottom: 15px;
+}
+
+.info_title {
+    /* margin: 0 auto; */
+    /* text-align: center; */
+    color: white;
+    font-size: 23px;
+    font-weight:bold;
+    letter-spacing: 2px;
+}
+.info_model h3{
+    color: white;
+    font-size:15px;
+    font-weight: lighter;
+}
+
+.upload_pictures {
+    /* 子元素水平居中对齐 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 60%;
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.63); */
+}
+
+/* 上传照片的提示信息 */
+.upload_pictures h4 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: white;
+
+}
+
+/* 数量统计信息 */
+.quantity {
+    position: absolute;
+    top: 13px;
+    right: 15px;
+
+}
+
+.quantity span {
+    color: white;
+    font-size: 14px;
+
+}
+
+.imgUp{
+    /* 重新选择子项的排列方式：侧轴从头开始 */
+    align-self: flex-start;
+    margin-left: 15px;
+    width:100px;
+    height:100px;
+}
+.icon_add i {
+    color: white;
+    /* font-weight: lighter; */
+}
+
+.upFile{
+    margin-top:-95px;
+    margin-left:5px;
+}
+
+.upFile input{
+    height: 70px;
+    width: 70px;
+    position: relative;
+    top:0px;
+    left:0px;
+    opacity: 0;
+}
+
+.imgShow{
+    margin: 0 auto;
+    margin-top:-73px;
+    width: 80px;
+    height:80px;
+}
+
+#cropedBigImg{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.63);
+    padding-bottom: 15px;
+}
+.upload a {
+    display: block;
+    width: 90px;
+    height: 40px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 2px solid white;
+    /* background-color: white; */
+    line-height: 35px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
+
+.data{
+    /* 子元素水平居中对齐 */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    position: relative;
+    margin-top: 40px;
+    width: 60%;
+}
+.get{
+    width:1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 60%;
+}
+.get a{
+    display: block;
+    width: 90px;
+    height: 40px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 2px solid white;
+    /* background-color: white; */
+    line-height: 35px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}

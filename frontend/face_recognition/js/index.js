@@ -2,9 +2,7 @@ var app = new Vue({
     el: "#nav",
     data: {
         Active: [true, false, false, false],
-        message: '加密人脸检测',
-        
-
+        message: '加密人脸检测'
     },
     //方法
     methods: {

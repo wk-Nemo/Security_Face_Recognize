@@ -10,6 +10,8 @@
     <!-- 关键字 -->
     <meta name="keywords" content="人脸识别,人脸检测,数据加密,负数据加密,同态加密,局部排序加密,支付系统" />
 
+    
+
     <!-- 引入favicon图标 -->
     <link rel="shortcut icon" href="favicon.ico" />
     <!-- 引入我们的初始化样式文件 -->
@@ -17,7 +19,7 @@
     <!-- 引入我们公共的样式文件 -->
     <link rel="stylesheet" href="css/common.css">
     <!-- 引入获取数据页面的样式文件 -->
-    <link rel="stylesheet" href="css/gain.css">
+    <link rel="stylesheet" href="css/gainbyvideo.css">
     <!-- 引入图标库 -->
     <link rel="stylesheet" href="http://at.alicdn.com/t/font_2283796_7ki2m0zngh4.css">
 </head>
@@ -47,34 +49,18 @@
     </div>
 
     <div id="photo">
-
         <div class="picture_model wrap">
             <h2 class="picture_title">拍摄照片</h2>
             <i class="iconfont icontouxiang" style="font-size: 100px;"></i>
             <div class="open_camera">
                 <a href="javascript:;" @click="redis()">开启摄像头</a>
             </div>
-            <h2 class="picture_title" style="margin: 15px 0;">上传你的照片</h2>
         </div>
-        <div class="upload_pictures wrap">
-            <h4>请限制照片大小在6M之内</h4>
-            <div class="quantity">
-                <span>0/1</span>
-            </div>
-            <a href="javascript:;" class="icon_add">
-                <i class="iconfont icontianjia" style="font-size: 80px;"></i>
-                <img :src="imgsrc" alt="imgTag" id="imgTag">
-            </a>
-            <!-- 利用块的方式实现一条分割线 -->
-            <div class="line"></div>
-            <div class="upload">
-                <a href="javascript:;">上传</a>
-            </div>
-        </div>
+        
 
         <div class="mask" id="mask" v-show="isShow">
             <div class="video_model">
-                <video id="video" width="768" height="300" autoplay="autoplay"></video>
+                <video id="video" width="800" height="560"  autoplay="autoplay"></video>
             </div>
             <div class="upload">
                 <a href="javascript:;" @click="hide()" id="hide">关闭摄像头</a>
@@ -85,9 +71,6 @@
             </div>
             <!-- <button class="take_picture" onclick="take_picture()">拍照</button> -->
         </div>
-
-        <!-- 作为处理数据的中间节点 请忽略 -->
-        <canvas id="temp_canvas" width="80px" height="80px" style="display: none;"></canvas>
 
     </div>
 
@@ -101,6 +84,8 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!-- 引入首页的js文件 -->
     <script src="js/gain.js"></script>
+    <script defer src="face-api.min.js"></script>
+    <script defer src="./js/gainbyvideo.js"></script>
 </body>
 
 </html>

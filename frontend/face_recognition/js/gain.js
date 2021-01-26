@@ -30,15 +30,14 @@ var app = new Vue({
 var app2 = new Vue({
     el: "#photo",
     data: {
-        isShow: false,
+        isShow: true,
         imgsrc: "../images/head.jpg",
     },
     methods: {
         redis: function () {
-            console.log("摄像头打开成功");
             this.isShow = true;
             let constraints = {
-                video: { width: 900, height: 500 },
+                video: true,
                 audio: false
             };
             
@@ -64,24 +63,10 @@ var app2 = new Vue({
         },
 
         take_picture: function () {
-            let canvas = document.getElementById('temp_canvas');
-            let ctx = canvas.getContext('2d');
-            ctx.drawImage(video, 0, 0, 80, 80);
-            // toDataURL  ---  可传入'image/png'---默认, 'image/jpeg'
-            let img = document.getElementById('temp_canvas').toDataURL();
-            // 这里的img就是得到的图片
-            console.log('img-----', img);
-            document.getElementById('imgTag').src = img;
-            // if (videL.paused) {
-            //     videL.play();
-            // } else {
-            //     videL.pause();
-            // }
+
+          
         },
 
-        chooseImage: function () {
-            
-        },
     },
 })
 

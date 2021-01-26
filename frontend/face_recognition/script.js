@@ -8,19 +8,23 @@ Promise.all([
 ]).then(start)
 
 async function start() {
-    //创建container容器并添加到body
-    const container = document.createElement('div')
-    container.style.position = 'relative'
-    document.getElementById("photo").append(container)
-
-    // const labeledFaceDescriptors = await loadLabeledImages()
-    // const faceMatcher = new faceapi.FaceMatcher(labeledFaceDescriptors,.6)
-
     //监听照片变化事件
     imageUpload.addEventListener('change', async () => {
+        //删除子节点
+        const my_photo = document.getElementById('myphoto')
+        if(my_photo.firstChild != null){
+            my_photo.removeChild(my_photo.firstChild);
+        }
+
+        //创建container容器并添加到body
+        const container = document.createElement('div')
+        container.style.position = 'relative'
+        container.style.height = "580px"
+        document.getElementById("myphoto").append(container)  
+
         //获取照片，设置样式，添加到容器中
         const image = await faceapi.bufferToImage(imageUpload.files[0])
-        image.style.width = '700px'
+        image.style.height = '580px'
         container.append(image)
 
         //创建画布

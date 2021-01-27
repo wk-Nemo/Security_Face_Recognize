@@ -1,7 +1,7 @@
 var app = new Vue({
     el: "#nav",
     data: {
-        Active: [false, false, true, false],
+        Active: [false, false, false, true],
         message: '加密人脸检测',
 
 

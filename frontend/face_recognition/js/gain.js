@@ -1,7 +1,7 @@
 var app = new Vue({
     el: "#nav",
     data: {
-        Active: [false, true, false, false],
+        Active: [false, false, true, false],
         message: '加密人脸检测',
 
 
@@ -30,7 +30,7 @@ var app = new Vue({
 var app2 = new Vue({
     el: "#photo",
     data: {
-        isShow: true,
+        isShow: false,
         imgsrc: "../images/head.jpg",
     },
     methods: {
@@ -60,6 +60,10 @@ var app2 = new Vue({
 
             document.getElementById('video').srcObject = null;
             this.isShow = false;
+
+            let video_model = document.querySelector('#video_model');
+            video_model.removeChild(video_model.children[1]);
+            console.log("移除成功");
         },
 
         take_picture: function () {

@@ -25,14 +25,14 @@
     <link rel="stylesheet" href="http://at.alicdn.com/t/font_2283796_7ki2m0zngh4.css">
 
     <style>
-       
+
     </style>
 </head>
 
 <body class="bodycss">
     <!-- 导航栏 -->
     <div class="nav wrap" id="nav">
-        <div class="title">
+        <div class="title" v-cloak>
             {{ message }}
         </div>
         <div class="navitems">
@@ -41,13 +41,13 @@
                     <a href="index.html" :class="{active:Active[0]}" @click="floor(0)">首页</a>
                 </li>
                 <li>
-                    <a href="gainbyphoto.html" :class="{active:Active[1]}" @click="floor(1)">录取</a>
+                    <a href="gainbyphoto.html" :class="{active:Active[1]}" @click="floor(1)">照片录取</a>
                 </li>
                 <li>
-                    <a href="info.html" :class="{active:Active[2]}" @click="floor(2)">信息</a>
+                    <a href="gainbyvideo.html" :class="{active:Active[2]}" @click="floor(2)">视频录取</a>
                 </li>
                 <li>
-                    <a href="#" :class="{active:Active[3]}" @click="floor(3)">关于</a>
+                    <a href="info.html" :class="{active:Active[3]}" @click="floor(3)">信息</a>
                 </li>
             </ul>
         </div>
@@ -63,16 +63,22 @@
     </div>
 
     <div class="inputbox">
-        <input type="file" id="imageUpload">
+        <!-- 实际显示的内容 -->
+        <!-- 点击事件传递给了input标签 -->
+        <div class="upload">
+            <a href="javascript:;" id="my_img">上传照片</a>
+        </div>
+        <!-- 这里我将input标签隐藏起来 但是在点击事件当中 我调用的还是input标签的点击事件 -->
+        <input type="file" id="imageUpload" style="display: none;">
     </div>
+
+
 
     <!-- 开发环境版本，包含了有帮助的命令行警告 -->
     <!-- <script src="js/vue.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <!-- 官网提供的 axios 在线地址 -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <!-- 引入首页的js文件 -->
-    <script src="js/gain.js"></script>
 </body>
 
 </html>

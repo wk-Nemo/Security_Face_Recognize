@@ -1,4 +1,39 @@
+var app = new Vue({
+    el: "#nav",
+    data: {
+        Active: [false, true, false, false],
+        message: '加密人脸检测',
+
+
+    },
+    //方法
+    methods: {
+        floor: function (p1) {
+            if (p1 == 0) {
+                this.Active = [true, false, false, false];
+            }
+            else if (p1 == 1) {
+                this.Active = [false, true, false, false];
+            }
+            else if (p1 == 2) {
+                this.Active = [false, false, true, false];
+            }
+            else {
+                this.Active = [false, false, false, true];
+            }
+
+        },
+
+    },
+})
+
+
 const imageUpload = document.getElementById('imageUpload')
+const my_img = document.querySelector('#my_img')
+my_img.onclick = function () {
+    console.log('按钮被点击了');
+    imageUpload.click();
+}
 
 Promise.all([
     // 加载模型

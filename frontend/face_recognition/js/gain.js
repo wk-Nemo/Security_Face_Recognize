@@ -62,8 +62,8 @@ var app2 = new Vue({
             this.isShow = false;
 
             let video_model = document.querySelector('#video_model');
-            video_model.removeChild(video_model.children[1]);
-            console.log("移除成功");
+            // video_model.removeChild(video_model.children[1]);
+            // console.log("移除成功");
         },
 
         take_picture: function () {

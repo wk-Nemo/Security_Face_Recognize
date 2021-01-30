@@ -30,7 +30,7 @@ var app = new Vue({
 var app2 = new Vue({
     el: "#photo",
     data: {
-        isShow: false,
+        isShow: true,
         imgsrc: "../images/head.jpg",
     },
     methods: {
@@ -51,6 +51,8 @@ var app2 = new Vue({
         },
 
         hide: function () {
+            const video_model = document.getElementsByClassName("video_model")
+            video_model[0].childNodes[1].getContext("2d").clearRect(0,0,800,560);
             let stream = document.getElementById('video').srcObject;
             let tracks = stream.getTracks();
 
@@ -58,12 +60,10 @@ var app2 = new Vue({
                 track.stop();
             });
 
+            
+            
             document.getElementById('video').srcObject = null;
-            this.isShow = false;
-
-            let video_model = document.querySelector('#video_model');
-            // video_model.removeChild(video_model.children[1]);
-            // console.log("移除成功");
+            this.isShow = false;  
         },
 
         take_picture: function () {

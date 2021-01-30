@@ -25,9 +25,7 @@ video.addEventListener('play', () => {
   //添加画布
   const canvas = faceapi.createCanvasFromMedia(video)
   const video_model = document.getElementsByClassName("video_model")
-  console.log(video_model)
-  video_model[0].appendChild(canvas)
-  
+  video_model[0].appendChild(canvas)  
 
   //获取视频尺寸，让画布匹配视频
   const displaySize = { width: video.width, height: video.height }
@@ -37,9 +35,9 @@ video.addEventListener('play', () => {
   setInterval(async () => {
     //加载检测器
     const detections = await faceapi.detectAllFaces(video,
-      new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions()
+      new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions().withFaceDescriptors()
     
-    console.log(detections.detections)
+    console.log(detections[0].descriptor)
 
     const resizeDetections = faceapi.resizeResults(detections, displaySize)
     canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height)

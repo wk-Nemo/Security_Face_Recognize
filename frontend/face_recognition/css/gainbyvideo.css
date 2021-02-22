@@ -154,14 +154,14 @@
     position: absolute;
     left:50%;
     top:5%;
-    margin-left:-400px;
+    margin-left:-300px;
 }
 
 canvas{
     position: absolute;
     left:50%;
     top:5%;
-    margin-left:-400px;
+    margin-left:-300px;
     float: left;
 }
 
@@ -169,12 +169,12 @@ canvas{
     margin:0;
     padding:0;
     width:100%;
-    height:650px;
+    height:550px;
     display:flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin:50px 0;
+    /* margin:50px 0; */
 }
 #imageUpload{
     width:400px;

@@ -59,7 +59,7 @@ async function start() {
 
         //获取照片，设置样式，添加到容器中
         const image = await faceapi.bufferToImage(imageUpload.files[0])
-        image.style.height = '580px'
+        image.style.height = '450px'
         container.append(image)
 
         //创建画布
@@ -95,19 +95,3 @@ async function start() {
         })
     })
 }
-
-// function loadLabeledImages() {
-//     const labels = ['Taylor Swift','Wu Kui']
-//     return Promise.all(
-//         labels.map(async label => {
-//             const descriptions = []
-//             for(let i=0; i<=2; i++){
-//                 const img = await faceapi.fetchImage('https://github.com/wk-Nemo/face_api.js/blob/main/labeled_images/Wu%20Kui/1.jpg?raw=true')
-//                 const detections = await faceapi.detectSingleFace(image).withFaceLandmarks().withFaceDescriptors()
-//                 descriptions.push(detections.descriptor)
-//             }
-            
-//             return new faceapi.LabeledFaceDescriptors(label, descriptions)
-//         })
-//     )
-// }

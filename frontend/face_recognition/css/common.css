@@ -1,4 +1,5 @@
 /* 版心 */
+[v-cloak] { display: none; }
 
 .wrap {
     width: 1200px;

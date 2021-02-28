@@ -68,15 +68,36 @@
         </div>
     </div>
 
-    <div class="inputbox">
-        <!-- 实际显示的内容 -->
-        <!-- 点击事件传递给了input标签 -->
-        <div class="upload">
-            <a href="javascript:;" id="my_img">上传照片</a>
+    <div class="inputwrap">
+        <div class="inputbox">
+            <!-- 实际显示的内容 -->
+            <!-- 点击事件传递给了input标签 -->
+            <div class="upload">
+                <a href="javascript:;" id="my_img">上传照片</a>
+            </div>
+            <!-- 这里我将input标签隐藏起来 但是在点击事件当中 我调用的还是input标签的点击事件 -->
+            <input type="file" id="imageUpload" style="display: none;">
+
+            <!-- 负数据加密 -->
+            <div class="upload">
+                <a href="javascript:;">负数据库</a>
+            </div>
+            <input type="file" id="getNDB" style="display: none;">
+
+            <!-- 局部排序加密 -->
+            <div class="upload">
+                <a href="javascript:;">局部排序</a>
+            </div>
+            <input type="file" id="" style="display: none;">
+
+            <!-- 同态加密 -->
+            <div class="upload">
+                <a href="javascript:;">同态加密</a>
+            </div>
+            <input type="file" id="" style="display: none;">
         </div>
-        <!-- 这里我将input标签隐藏起来 但是在点击事件当中 我调用的还是input标签的点击事件 -->
-        <input type="file" id="imageUpload" style="display: none;">
     </div>
+        
 </body>
 
 </html>

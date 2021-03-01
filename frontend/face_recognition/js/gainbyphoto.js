@@ -93,6 +93,7 @@ async function start() {
             faceapi.draw.drawDetections(canvas, resizedDetections)
             faceapi.draw.drawFaceLandmarks(canvas, resizedDetections)
             descriptor.push(detection.descriptor)
+            // console
         })
     })
 }
@@ -238,16 +239,18 @@ function getSpecific() {
             specific_res.push('1')
         }
     }
-    var s = specific_res.join('')
-    console.log(s)
-    return s
+    var res = specific_res.join('')
+    return res
   }
   
 
 // 初始化p，q和posbility
-function init() {
+function init(before_s) {
+    specific = getSpecific()
+    // 对s进行异或
+    s = xor(before_s)
     m = s.length    //字符串位数
-	r = 7  
+	r = 10  
 	p[0] = 0
 	p[1] = 0.95
 	p[2] = 0.03
@@ -264,9 +267,6 @@ function init() {
 	q[7] = 0.05
     q[8] = 0.05
     q[9] = 0.05
-
-
-    specific = getSpecific()
 
 	for (let i = 0; i < 10; i++) {   
         //最大位数为20
@@ -504,7 +504,75 @@ function getAttr() {
 }
 
 function createNDB() {
-    alert("ok")
+    if (descriptor[0] === undefined) {
+        alert("请先上传照片")
+        console.log(typeof(descriptor))
+        return
+    } else {
+        let before_s = ''
+        // 生成s
+        for (let i=0; i<128; i++) {
+            var n = floatTo2(descriptor[0][i])
+            lens[i] = n.len
+            before_s = before_s.concat(n.s)
+            flag[i] = n.flag
+        }
+        // 初始话数据
+        init(before_s)
+        // console.log(before_s)
+        // console.log(specific)
+        // console.log(s)
+
+        // 生成负数据库
+        f(s)
+        console.log(NDB.length)
+
+        //统计0/1个数
+        num_01()
+
+        //计算期望
+        getAttr()
+
+        for(let i=0; i<128; i++) {
+            // var num = toFloat(r[i], flag[i])
+            // console.log(num)
+            Gen[i] *= Math.pow(10, -3)
+        }
+    
+        // 验证正确性
+        // 将Gen转换成二进制串得到新的s再异或回去
+        var after_s = ''
+        for (let i=0; i<128; i++) {
+            var n = floatTo2(Gen[i])
+            after_s = after_s.concat(n.s)
+        }
+
+        // 期望串s
+        var result_s = xor(after_s)
+        console.log(after_s.slice(0,20))
+        console.log(specific.slice(0,20))
+        console.log(result_s.slice(0,20))
+        console.log(before_s.slice(0,20))
+
+        var result_128s = to128Float(result_s, lens)
+        var result_nums = []
+        for (let i=0; i<128; i++) {
+            var result_num = toFloat(result_128s[i], flag[i])
+            result_nums.push(result_num)
+        }
+    
+    
+        //二进制串转换成128向量
+        for (let i=0; i<12; i++) {
+            var n = floatTo2(descriptor[0][i])
+            console.log(n.s)
+            console.log(result_128s[i])
+            console.log(specific.slice(i*10,i*10+10))
+            console.log(descriptor[0][i])
+            console.log(result_nums[i])
+            console.log("-----------------------")
+        }
+    }
 }
 
 const getNDB = document.getElementById('getNDB')

@@ -43,8 +43,6 @@ https://github.com/coneypo/Dlib_face_recognition_from_camera
 #### 2.3应用开发部分
 前后端分离
 ##### 2.3.1前端
-web：熊航、何璐璐、吴奎
-安卓：赵凡
 原型图地址：https://sql.tian999.top/
 
 ###### 1.主要工作：
